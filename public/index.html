@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Codeweb | أكواد الألعاب والاشتراكات</title>
+<link rel="icon" href="/logo-mark.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Reem+Kufi:wght@500;700&family=Saira:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Codeweb، الصفحة الرئيسية"><img src="/logo-mark.jpg" alt=""><span class="w">Code<span class="g">web</span></span></a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a class="lnk" href="#how">كيف تشتري</a>
+      <a class="lnk" href="#shop">المتجر</a>
+      <button class="cartbtn" id="openCart">السلة <b id="count">٠</b></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>أكواد الألعاب والاشتراكات، تصلك فورًا</h1>
+        <p class="lead">بطاقات المتاجر وشحن الألعاب والاشتراكات الشهرية في مكان واحد. اختر الفئة واستلم الكود على بريدك.</p>
+        <form class="search" role="search" onsubmit="return false">
+          <input id="q" type="search" placeholder="ابحث عن لعبة أو اشتراك" aria-label="ابحث في المنتجات" autocomplete="off">
+          <a class="btn" href="#shop">ابحث</a>
+        </form>
+      </div>
+      <img class="logo" src="/logo-full.jpg" alt="شعار Codeweb: أكواد الألعاب والاشتراكات">
+    </div>
+  </section>
+
+  <section class="how" id="how" aria-label="خطوات الشراء">
+    <div class="wrap">
+      <ol>
+        <li><span class="n g">١</span><div><strong>اختر المنتج والفئة</strong><span class="d">بطاقة رصيد أو شحن لعبة أو اشتراك.</span></div></li>
+        <li><span class="n g">٢</span><div><strong>أكمل الدفع</strong><span class="d">أدخل بريدك وادفع بأمان.</span></div></li>
+        <li><span class="n g">٣</span><div><strong>استلم الكود</strong><span class="d">يظهر في صفحة طلبك ويصل إلى بريدك.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="wrap">
+      <h2>المتجر</h2>
+      <div class="bar">
+        <div class="tabs" id="tabs" role="group" aria-label="تصفية حسب النوع"></div>
+        <div class="tools">
+          <span id="result" aria-live="polite"></span>
+          <label for="sort" class="sr">ترتيب المنتجات</label>
+          <select id="sort">
+            <option value="new">الأحدث</option>
+            <option value="low">الأقل سعرًا</option>
+            <option value="high">الأعلى سعرًا</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid" id="grid"><div class="empty"><p>جارٍ تحميل المنتجات…</p></div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fb"><img src="/logo-mark.jpg" alt=""><span class="w">Code<span class="g">web</span></span></div>
+      <p style="margin-top:10px">أكواد الألعاب والاشتراكات.</p>
+    </div>
+    <div>
+      <p><a href="/policies">من نحن وسياسة الاسترجاع والخصوصية</a></p>
+      <p style="margin-top:6px">أسماء المنتجات والعلامات التجارية مملوكة لأصحابها.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="سلة المشتريات">
+  <div class="dh"><h2>السلة</h2><button class="x" id="closeCart" aria-label="إغلاق السلة">✕</button></div>
+  <div class="db" id="cartBody"></div>
+  <div class="df" id="cartFoot" hidden></div>
+</aside>
+
+<dialog id="dlg" aria-label="تفاصيل المنتج"></dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="/common.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
